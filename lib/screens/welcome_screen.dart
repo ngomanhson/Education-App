@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:education/screens/home_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -64,9 +65,9 @@ class WelcomeScreen extends StatelessWidget {
                         wordSpacing: 2,
                       )
                   ),
-                  SizedBox(height: 15),
+                  const SizedBox(height: 15),
                   Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 40),
+                      padding: const EdgeInsets.symmetric(horizontal: 40),
                       child: Text(
                           "Learning with Pleasure with Dear Programmer, Wherever you are.",
                         textAlign: TextAlign.center,
@@ -81,7 +82,13 @@ class WelcomeScreen extends StatelessWidget {
                     color: const Color(0xFF674AEF),
                     borderRadius: BorderRadius.circular(10),
                     child: InkWell(
-                      onTap: (){},
+                      onTap: (){
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context)=> HomePage(),
+                            ));
+                      },
                       child: Container(
                         padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 80),
                         child: const Text(
