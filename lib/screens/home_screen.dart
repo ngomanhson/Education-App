@@ -1,3 +1,4 @@
+import 'package:education/screens/course_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -183,7 +184,11 @@ class HomePage extends StatelessWidget {
                   ),
                 itemBuilder: (context, index) {
                   return InkWell(
-                    onTap: (){},
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(
+                          builder: (context) => CourseScreen(imgList[index])
+                      ),);
+                    },
                     child: Container(
                       padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
                       decoration: BoxDecoration(
